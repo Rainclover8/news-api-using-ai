@@ -76,12 +76,13 @@ export default function Home() {
                 <CardTitle>{item.name}</CardTitle>
               </CardHeader>
               <CardContent>
-                
-                <p className="text-gray-600 text-sm">{
-                  item.description.length > 100
+                <p className="text-gray-600 text-sm">
+                  {item.description.length > 100
                   ? item.description.slice(0, 100) + "..."
                   : item.description
-                }</p>
+                  }
+                  
+                  </p>
               </CardContent>
               <CardFooter className="flex justify-between items-center text-sm text-gray-500">
                 <span>{new Date(item.date).toLocaleDateString("tr-TR")}</span>
