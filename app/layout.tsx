@@ -38,6 +38,9 @@ export default function RootLayout({
      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1464195965921155"
      crossOrigin="anonymous"></script>
      <meta name="google-adsense-account" content="ca-pub-1464195965921155"></meta>
+     {/* Search Console */}
+     <meta name="google-site-verification" content="4iJJCZDoJPBKHbFPfgHBByqwov4Z9TACiJwG_kaDg4g" />
+     
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
