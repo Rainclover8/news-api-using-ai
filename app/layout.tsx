@@ -37,6 +37,7 @@ export default function RootLayout({
      {/* ADS Ekleme */}
      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1464195965921155"
      crossOrigin="anonymous"></script>
+     <meta name="google-adsense-account" content="ca-pub-1464195965921155"></meta>
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
