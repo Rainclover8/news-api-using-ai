@@ -61,7 +61,7 @@ export default function Home() {
             <Card key={item.key} className="overflow-hidden shadow-lg">
               {item.image &&
                 (loading ? (
-                  <div className="">
+                  <div>
                     {" "}
                     <Loader />
                   </div>

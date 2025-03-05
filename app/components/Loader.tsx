@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Loader = () => {
   return (
-    <StyledWrapper>
+    <StyledWrapper className='h-screen flex justify-center items-center'>
       <div className="loader" />
     </StyledWrapper>
   );
