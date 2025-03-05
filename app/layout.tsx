@@ -33,6 +33,10 @@ export default function RootLayout({
       {/* Google Ads Deneme - Oto reklam */}
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1464195965921155"
      crossOrigin="anonymous"></script>
+
+     {/* ADS Ekleme */}
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1464195965921155"
+     crossOrigin="anonymous"></script>
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
