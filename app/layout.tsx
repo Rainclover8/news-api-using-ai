@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   keywords: "haber, güncel haberler, Baran Çiçek, son dakika haberleri",
   creator: "Baran Çiçek",
 };
-// Umarım Çalışır
+
 export default function RootLayout({
   children,
 }: Readonly<{
