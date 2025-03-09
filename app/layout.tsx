@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   keywords: "haber, güncel haberler, Baran Çiçek, son dakika haberleri",
   creator: "Baran Çiçek",
 };
-
+// Reklam Eklemek Gerekiyor ve bazı geliştirmeler lazım
 export default function RootLayout({
   children,
 }: Readonly<{
