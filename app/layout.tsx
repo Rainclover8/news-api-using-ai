@@ -28,13 +28,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <Head>
+      <head>
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="4iJJCZDoJPBKHbFPfgHBByqwov4Z9TACiJwG_kaDg4g" />
         {/* Google Ads Script */}
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1464195965921155" crossOrigin="anonymous"></script>
         <meta name="google-adsense-account" content="ca-pub-1464195965921155"></meta>
-      </Head>
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
