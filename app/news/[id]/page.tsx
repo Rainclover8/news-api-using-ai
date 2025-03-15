@@ -48,7 +48,7 @@ export default async function NewsDetail({
   }
 
   return (
-    <div className="p-4">
+    <div className="p-4 flex  justify-center items-center flex-col gap-y-4">
       <h1 className="text-2xl font-bold mb-4">{newsItem.name}</h1>
       <p className="text-gray-600 mb-2">{newsItem.description}</p>
       {newsItem.image && (
@@ -66,6 +66,13 @@ export default async function NewsDetail({
         className="text-blue-600 underline block mt-4"
       >
         Haberi Oku
+      </a>
+      <a
+        href="/"
+        rel="noopener noreferrer"
+        className="block mt-4 border p-3 rounded-lg bg-red-400 hover:bg-red-500 text-white"
+      >
+        Ana Sayfaya Dön
       </a>
     </div>
   );
