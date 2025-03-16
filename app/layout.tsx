@@ -28,6 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
+      {/* Reklam Alamıyoruz!!!! */}
       <head>
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="4iJJCZDoJPBKHbFPfgHBByqwov4Z9TACiJwG_kaDg4g" />
