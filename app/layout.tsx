@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="tr">
       {/* Reklam Alamıyoruz!!!! */}
       <head>
-        <link rel="shortcut icon" href="/favicon.svg" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="4iJJCZDoJPBKHbFPfgHBByqwov4Z9TACiJwG_kaDg4g" />
         {/* Google Ads Script */}
