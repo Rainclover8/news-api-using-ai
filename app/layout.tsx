@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,6 +29,7 @@ export default function RootLayout({
     <html lang="tr">
       {/* Reklam Alamıyoruz!!!! */}
       <head>
+        <link rel="shortcut icon" href="./news.png" type="image/x-icon" />
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content="4iJJCZDoJPBKHbFPfgHBByqwov4Z9TACiJwG_kaDg4g" />
         {/* Google Ads Script */}
