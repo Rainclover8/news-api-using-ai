@@ -59,7 +59,7 @@ export default function Home() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {news.map((item) => (
-            <Card key={item.key} className="overflow-hidden shadow-lg">
+            <Card key={item.key} className="overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-500">
               {item.image &&
                 (loading ? (
                   <div>
@@ -87,7 +87,7 @@ export default function Home() {
                   
                   </p>
               </CardContent>
-              <CardFooter className="flex justify-between items-center text-sm text-gray-500">
+              <CardFooter className="flex justify-between items-center text-sm text-gray-500 ">
                 <span>{new Date(item.date).toLocaleDateString("tr-TR")}</span>
                 <Link
                   href={`/news/${item.key}`}
