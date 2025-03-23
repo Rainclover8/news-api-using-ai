@@ -47,6 +47,7 @@ export default function Home() {
   }, []);
 // ADS DENEME TEKRAR
 // Reklam alamadık, Düzelt!
+// Düzeltmeler de işe yaramıyo
   return (
     <main className="container mx-auto px-4 py-8">
     
