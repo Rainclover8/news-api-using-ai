@@ -46,8 +46,6 @@ export default function Home() {
       .catch((err) => console.error("Hata:", err));
   }, []);
 // ADS DENEME TEKRAR
-// Reklam alamadık, Düzelt!
-// Düzeltmeler de işe yaramıyo
   return (
     <main className="container mx-auto px-4 py-8">
     
