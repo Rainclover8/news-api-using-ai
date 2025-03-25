@@ -58,7 +58,7 @@ export default function Home() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {news.map((item) => (
-            <Card key={item.key} className="overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-500">
+            <Card key={item.key} className="overflow-hidden shadow-lg hover:shadow-2xl  duration-500 hover:scale-105 transition-all">
               {item.image &&
                 (loading ? (
                   <div>
