@@ -48,8 +48,7 @@ export default function Home() {
 // ADS DENEME TEKRAR
 // Reklam alamadık!!
 // Tekrar deneniyor
-
-
+// Galiba yine alamadık Kontrol edilecek
 // Geri dönüş. Reklam kontolü
   return (
     <main className="container mx-auto px-4 py-8">
