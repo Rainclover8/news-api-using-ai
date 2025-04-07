@@ -50,6 +50,7 @@ export default function Home() {
 // Tekrar deneniyor
 // Galiba yine alamadık Kontrol edilecek
 // Geri dönüş. Reklam kontolü
+// Hala Reklam Bekleniyor!!!
   return (
     <main className="container mx-auto px-4 py-8">
     
