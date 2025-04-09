@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import Loader from "./components/Loader";
 import Footer from "./components/Footer";
+import MorphingText from "@/components/eldoraui/morphingtext";
 
 interface NewsItem {
   key: string;
@@ -45,17 +46,25 @@ export default function Home() {
       })
       .catch((err) => console.error("Hata:", err));
   }, []);
-// ADS DENEME TEKRAR
-// Reklam alamadık!!
-// Tekrar deneniyor
-// Galiba yine alamadık Kontrol edilecek
-// Geri dönüş. Reklam kontolü
-// Hala Reklam Bekleniyor!!!
-// Stilll
-// Reklam Başarısız!
+  // ADS DENEME TEKRAR
+  // Reklam alamadık!!
+  // Tekrar deneniyor
+  // Galiba yine alamadık Kontrol edilecek
+  // Geri dönüş. Reklam kontolü
+  // Hala Reklam Bekleniyor!!!
+  // Stilll
+  // Reklam Başarısız!
+
+  const texts = [
+    "Hızlı Haberler",
+    "Güvenilir Kaynaklar",
+    "Haberler Burada!",
+  ]
   return (
-    <main className="container mx-auto px-4 py-8">
-    
+    <main className="container mx-auto px-4 py-8 overflow-hidden">
+
+      <MorphingText texts={texts} className="w-full md:text-nowrap mb-12" />
+
       <h1 className="text-4xl font-bold mb-8">Hızlı Haberler</h1>
       {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> */}
       {loading ? (
@@ -87,11 +96,11 @@ export default function Home() {
               <CardContent>
                 <p className="text-gray-600 text-sm">
                   {item.description.length > 100
-                  ? item.description.slice(0, 100) + "..."
-                  : item.description
+                    ? item.description.slice(0, 100) + "..."
+                    : item.description
                   }
-                  
-                  </p>
+
+                </p>
               </CardContent>
               <CardFooter className="flex justify-between items-center text-sm text-gray-500 ">
                 <span>{new Date(item.date).toLocaleDateString("tr-TR")}</span>
@@ -104,14 +113,14 @@ export default function Home() {
               </CardFooter>
             </Card>
           ))}
- 
+
         </div>
       )}
-      
+
       {/* </div> */}
       <div className="mt-24">
-        <Footer/>
-     </div>
+        <Footer />
+      </div>
     </main>
   );
 }
