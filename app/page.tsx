@@ -54,7 +54,7 @@ export default function Home() {
   // Hala Reklam Bekleniyor!!!
   // Stilll
   // Reklam Başarısız!
-
+  // tekrar denemek üzere yolladık!
   const texts = [
     "Hızlı Haberler",
     "Güvenilir Kaynaklar",
