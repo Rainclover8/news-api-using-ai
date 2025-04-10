@@ -19,24 +19,37 @@ export const metadata: Metadata = {
   keywords: "haber, güncel haberler, Baran Çiçek, son dakika haberleri",
   creator: "Baran Çiçek",
 };
-// Reklam Eklemek Gerekiyor ve bazı geliştirmeler lazım
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="tr">
-      {/* Reklam Alamıyoruz!!!! */}
       <head>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
         {/* Google Search Console Verification */}
-        <meta name="google-site-verification" content="4iJJCZDoJPBKHbFPfgHBByqwov4Z9TACiJwG_kaDg4g" />
-        {/* Google Ads Script */}
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1464195965921155" crossOrigin="anonymous"></script>
-        <meta name="google-adsense-account" content="ca-pub-1464195965921155"></meta>
+        <meta
+          name="google-site-verification"
+          content="4iJJCZDoJPBKHbFPfgHBByqwov4Z9TACiJwG_kaDg4g"
+        />
+
+        {/* Google Ads */}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1464195965921155"
+          crossOrigin="anonymous"
+        ></script>
+        <meta
+          name="google-adsense-account"
+          content="ca-pub-1464195965921155"
+        />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
