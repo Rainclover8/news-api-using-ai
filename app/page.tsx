@@ -39,70 +39,67 @@ export default function Home() {
       .then((data) => {
         if (data.success) {
           setNews(data.result);
-          setLoading(false);
         } else {
           console.error("Haberler alınamadı", data);
         }
+        setLoading(false);
       })
-      .catch((err) => console.error("Hata:", err));
+      .catch((err) => {
+        console.error("Hata:", err);
+        setLoading(false);
+      });
   }, []);
-  // ADS DENEME TEKRAR
-  // Reklam alamadık!!
-  // Tekrar deneniyor
-  // Galiba yine alamadık Kontrol edilecek
-  // Geri dönüş. Reklam kontolü
-  // Hala Reklam Bekleniyor!!!
-  // Stilll
-  // Reklam Başarısız!
-  // tekrar denemek üzere yolladık!
+
   const texts = [
     "Hızlı Haberler",
     "Güvenilir Kaynaklar",
     "Haberler Burada!",
-  ]
+  ];
+
   return (
     <main className="container mx-auto px-4 py-8 overflow-hidden">
-
       <MorphingText texts={texts} className="w-full md:text-nowrap mb-12" />
+      <h1 className="text-4xl font-bold mb-4">Hızlı Haberler</h1>
+      <p className="text-gray-500 mb-8">
+        En güncel haberleri güvenilir kaynaklardan sizin için derliyoruz. Aşağıdan son gelişmeleri takip edebilirsiniz.
+      </p>
 
-      <h1 className="text-4xl font-bold mb-8">Hızlı Haberler</h1>
-      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> */}
       {loading ? (
-        <div className="flex justify-center items-center ">
+        <div className="flex justify-center items-center h-40">
           <Loader />
+        </div>
+      ) : news.length === 0 ? (
+        <div className="text-center text-gray-500 text-lg mt-12">
+          Şu anda gösterilecek haber bulunamadı. Lütfen daha sonra tekrar deneyin.
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {news.map((item) => (
-            <Card key={item.key} className="overflow-hidden shadow-lg hover:shadow-2xl  duration-500 hover:scale-105 transition-all">
-              {item.image &&
-                (loading ? (
-                  <div>
-                    {""}
-                    <Loader />
-                  </div>
-                ) : (
-                  <div className="">
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className="w-full h-48 object-cover"
-                    />
-                  </div>
-                ))}
+            <Card
+              key={item.key}
+              className="overflow-hidden shadow-lg hover:shadow-2xl duration-500 hover:scale-105 transition-all"
+            >
+              <div>
+                <img
+                  src={item.image || "/favicon.ico"}
+                  alt={item.name}
+                  className="w-full h-48 object-cover"
+                />
+              </div>
+
               <CardHeader>
                 <CardTitle>{item.name}</CardTitle>
               </CardHeader>
+
               <CardContent>
                 <p className="text-gray-600 text-sm">
                   {item.description.length > 100
                     ? item.description.slice(0, 100) + "..."
-                    : item.description
-                  }
-
+                    : item.description}
                 </p>
               </CardContent>
-              <CardFooter className="flex justify-between items-center text-sm text-gray-500 ">
+
+              <CardFooter className="flex justify-between items-center text-sm text-gray-500">
                 <span>{new Date(item.date).toLocaleDateString("tr-TR")}</span>
                 <Link
                   href={`/news/${item.key}`}
@@ -113,11 +110,9 @@ export default function Home() {
               </CardFooter>
             </Card>
           ))}
-
         </div>
       )}
 
-      {/* </div> */}
       <div className="mt-24">
         <Footer />
       </div>
