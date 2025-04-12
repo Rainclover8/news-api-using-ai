@@ -11,6 +11,7 @@ import {
 import Loader from "./components/Loader";
 import Footer from "./components/Footer";
 import MorphingText from "@/components/eldoraui/morphingtext";
+import AdsComponent from "./components/AdsComponent"; 
 
 interface NewsItem {
   key: string;
@@ -27,7 +28,6 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY;
 
-  // Umarım Artık reklam alabiliriz!!!
   useEffect(() => {
     fetch("https://api.collectapi.com/news/getNews?country=tr&tag=general", {
       method: "GET",
@@ -74,49 +74,60 @@ export default function Home() {
           Şu anda gösterilecek haber bulunamadı. Lütfen daha sonra tekrar deneyin.
         </div>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {news.map((item) => (
-            <Card
-              key={item.key}
-              className="overflow-hidden shadow-lg hover:shadow-2xl duration-500 hover:scale-105 transition-all"
-            >
-              <div>
-                <img
-                  src={item.image || "/favicon.ico"}
-                  alt={item.name}
-                  className="w-full h-48 object-cover"
-                />
-              </div>
+        <>
+          {/* Haber kartları */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {news.map((item) => (
+              <Card
+                key={item.key}
+                className="overflow-hidden shadow-lg hover:shadow-2xl duration-500 hover:scale-105 transition-all"
+              >
+                <div>
+                  <img
+                    src={item.image || "/favicon.ico"}
+                    alt={item.name}
+                    className="w-full h-48 object-cover"
+                  />
+                </div>
 
-              <CardHeader>
-                <CardTitle>{item.name}</CardTitle>
-              </CardHeader>
+                <CardHeader>
+                  <CardTitle>{item.name}</CardTitle>
+                </CardHeader>
 
-              <CardContent>
-                <p className="text-gray-600 text-sm">
-                  {item.description.length > 100
-                    ? item.description.slice(0, 100) + "..."
-                    : item.description}
-                </p>
-              </CardContent>
+                <CardContent>
+                  <p className="text-gray-600 text-sm">
+                    {item.description.length > 100
+                      ? item.description.slice(0, 100) + "..."
+                      : item.description}
+                  </p>
+                </CardContent>
 
-              <CardFooter className="flex justify-between items-center text-sm text-gray-500">
-                <span>{new Date(item.date).toLocaleDateString("tr-TR")}</span>
-                <Link
-                  href={`/news/${item.key}`}
-                  className="text-blue-600 hover:underline"
-                >
-                  Detayları Oku
-                </Link>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
+                <CardFooter className="flex justify-between items-center text-sm text-gray-500">
+                  <span>{new Date(item.date).toLocaleDateString("tr-TR")}</span>
+                  <Link
+                    href={`/news/${item.key}`}
+                    className="text-blue-600 hover:underline"
+                  >
+                    Detayları Oku
+                  </Link>
+                </CardFooter>
+              </Card>
+            ))}
+          </div>
+
+          {/* Reklam bileşeni yalnızca haberler geldiyse gösterilecek */}
+          <div className="mt-12">
+            <AdsComponent />
+          </div>
+        </>
       )}
 
-      <div className="mt-24">
-        <Footer />
-      </div>
+      {/* Footer da sadece içerik varsa render edilsin */}
+      {!loading && news.length > 0 && (
+        <div className="mt-24">
+          <Footer />
+        </div>
+      )}
     </main>
   );
 }
