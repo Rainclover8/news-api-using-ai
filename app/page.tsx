@@ -22,7 +22,7 @@ interface NewsItem {
   source: string;
   date: string;
 }
-
+// Ayın 18'inde Tekrar denenecek !!! 
 export default function Home() {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
