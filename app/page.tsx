@@ -24,6 +24,7 @@ interface NewsItem {
 }
 // Ayın 18'inde Tekrar denenecek !!! 
 // ads denemesi için son 3 gün!!
+// Yarın ads denemesi!
 export default function Home() {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
