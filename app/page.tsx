@@ -22,10 +22,7 @@ interface NewsItem {
   source: string;
   date: string;
 }
-// Ayın 18'inde Tekrar denenecek !!! 
-// ads denemesi için son 3 gün!!
-// Yarın ads denemesi!
-// Bugün ads denemesi
+// Reklam denedik 19.04.2025
 export default function Home() {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
