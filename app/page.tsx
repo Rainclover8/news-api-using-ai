@@ -60,7 +60,7 @@ export default function Home() {
   return (
     <main className="container mx-auto px-4 py-8 overflow-hidden">
       <MorphingText texts={texts} className="w-full md:text-nowrap mb-12" />
-      <h1 className="text-4xl font-bold mb-4">Hızlı Haberler</h1>
+      <h1 className="text-4xl font-bold mb-4  ">Hızlı Haberler</h1>
       <p className="text-gray-500 mb-8">
         En güncel haberleri güvenilir kaynaklardan sizin için derliyoruz. Aşağıdan son gelişmeleri takip edebilirsiniz.
       </p>
