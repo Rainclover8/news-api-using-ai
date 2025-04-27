@@ -60,9 +60,14 @@ export default function Home() {
 
 //! Reklam alamadık Tekrar
 
+///####
 // Reklam Tekrar denenecek!!!!
 
-//RED YEDİK
+//RED YEDİK###1
+
+
+
+
   return (
     <main className="container mx-auto px-4 py-8 overflow-hidden">
       <MorphingText texts={texts} className="w-full md:text-nowrap mb-12" />
