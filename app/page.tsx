@@ -11,7 +11,7 @@ import {
 import Loader from "./components/Loader";
 import Footer from "./components/Footer";
 import MorphingText from "@/components/eldoraui/morphingtext";
-import AdsComponent from "./components/AdsComponent"; 
+import AdsComponent from "./components/AdsComponent";
 
 interface NewsItem {
   key: string;
@@ -22,7 +22,6 @@ interface NewsItem {
   source: string;
   date: string;
 }
-// Reklam denedik 19.04.2025
 export default function Home() {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
