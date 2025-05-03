@@ -74,7 +74,6 @@ export default function Home() {
         </div>
       ) : (
         <>
-          {/* Haber kartları */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {news.map((item) => (
               <Card
@@ -114,14 +113,12 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Reklam bileşeni yalnızca haberler geldiyse gösterilecek */}
           <div className="mt-12">
             <AdsComponent />
           </div>
         </>
       )}
 
-      {/* Footer da sadece içerik varsa render edilsin */}
       {!loading && news.length > 0 && (
         <div className="mt-24">
           <Footer />
