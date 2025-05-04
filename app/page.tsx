@@ -26,9 +26,6 @@ export default function Home() {
   const [news, setNews] = useState<NewsItem[]>([]);
   const [loading, setLoading] = useState(true);
   const API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY;
-//ADS Alamadık
-// ve alamamaya da devam edeceğiz 
-
 
 useEffect(() => {
     fetch("https://api.collectapi.com/news/getNews?country=tr&tag=general", {
