@@ -9,6 +9,7 @@ const Loader = () => {
   );
 }
 
+
 const StyledWrapper = styled.div`
   .loader {
     width: 48px;

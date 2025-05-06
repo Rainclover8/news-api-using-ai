@@ -27,6 +27,8 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY;
 
+
+  
 useEffect(() => {
     fetch("https://api.collectapi.com/news/getNews?country=tr&tag=general", {
       method: "GET",
