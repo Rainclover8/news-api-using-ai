@@ -1,10 +1,7 @@
 import { notFound } from "next/navigation";
-
-// Explicitly define the type for params
 interface Params {
   id: string;
 }
-
 interface NewsItem {
   key: string;
   url: string;
@@ -14,7 +11,6 @@ interface NewsItem {
   source: string;
   date: string;
 }
-
 export default async function NewsDetail({
   params,
 }: {
@@ -42,7 +38,6 @@ export default async function NewsDetail({
   if (!newsItem) {
     return notFound();
   }
-
   return (
     <div className="p-4 flex  justify-center items-center flex-col gap-y-4">
       <h1 className="text-2xl font-bold mb-4">{newsItem.name}</h1>
