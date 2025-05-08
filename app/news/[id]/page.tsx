@@ -18,14 +18,10 @@ interface NewsItem {
 export default async function NewsDetail({
   params,
 }: {
-  params: Promise<Params>; // `params` is now a Promise
+  params: Promise<Params>; 
 }) {
   const API_KEY = process.env.NEXT_PUBLIC_NEWS_API_KEY;
-
-  // Await the params object before using it
   const { id } = await params;
-
-  // Fetch the news details
   const res = await fetch(
     `https://api.collectapi.com/news/getNews?country=tr&tag=general`,
     {
