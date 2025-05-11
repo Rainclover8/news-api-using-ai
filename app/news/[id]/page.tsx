@@ -31,13 +31,13 @@ export default async function NewsDetail({
   if (!res.ok) {
     return notFound();
   }
-
   const data = await res.json();
   const newsItem = data.result.find((item: NewsItem) => item.key === id);
-
   if (!newsItem) {
     return notFound();
   }
+
+  // reklam denemesş için birkaç değişiklik
   return (
     <div className="p-4 flex  justify-center items-center flex-col gap-y-4">
       <h1 className="text-2xl font-bold mb-4">{newsItem.name}</h1>
